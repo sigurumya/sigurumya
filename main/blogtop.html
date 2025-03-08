@@ -3,15 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>しぐるみゃのサイト｜ブログ一覧</title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="しぐるみゃのブログ一覧です">
     <meta name="author" content="しぐるみゃ">
     <meta name="keywords" content="しぐるみゃ,しぐるー,ブログ一覧,ブログ情報,ブログ,記事,記事一覧,記事情報,記事一覧情報">
-    <link rel="icon" href="sigurumya-logo.webp"/>
-    <base href="https://sigurumya.github.io/sigurumya/">
+    <link rel="icon" href="https://cdn.glitch.global/19387e65-7815-43cb-a27c-a65db22ffc28/sigurumya-logo.webp?v=1740918988879"/>
+    <base href="C:/Users/sorisute/Documents/サイト/しぐるみゃ/index.html">
     <script src="menubar.js"></script>
     <link rel="stylesheet" href="menubar.css">
     <link rel="stylesheet" href="main/blogtop.css">
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch('main/blogdata.json')
+          .then(response => response.json())
+          .then(data => {
+            const blogList = document.getElementById('blog-list');
+            data.forEach(blog => {
+              const blogItem = document.createElement('div');
+              blogItem.className = 'blog-item';
+              blogItem.innerHTML = `
+                <h2><a href="${blog.url}">${blog.title}</a></h2>
+                <p>${blog.date}</p>
+                <p>${blog.summary}</p>
+              `;
+              blogList.appendChild(blogItem);
+            });
+          })
+          .catch(error => console.error('Error fetching blog data:', error));
+      });
+
+      function searchBlogs() {
+        const query = document.getElementById('search-input').value.toLowerCase();
+        const blogItems = document.querySelectorAll('.blog-item');
+        blogItems.forEach(item => {
+          const title = item.querySelector('h2').innerText.toLowerCase();
+          if (title.includes(query)) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
+    </script>
   </head>
   <body>
     <header class="header">
@@ -27,8 +60,14 @@
       </div>
     </header>
     <div class="main">
-      <div class="main-top"></div>
-      <p>未完成です…</p>
+      <div class="main-top">
+        <!-- ここには何も記述しない -->
+      </div>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="ブログを検索...">
+        <button onclick="searchBlogs()">検索</button>
+      </div>
+      <div id="blog-list"></div>
     </div>
   </body>
 </html>
