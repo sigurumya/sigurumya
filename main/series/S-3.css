@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    color: #ffffff;
+    background-color: #181a1b;
+    font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
+}
+.logo{
+    width: 250px;
+    height: 250px;
+    float: left;
+    box-shadow: 10px 10px 0 #ff9600;
+}
+.name{
+    font-size: 40px;
+    padding: 0px 0px 0px 285px;
+}
+.url{
+    clear: right;
+    display: block;
+    padding: 0px 0px 0px 290px;
+}
+.url h2{
+    clear: right;
+    font-size: 27.5px;
+    padding: 0px 15px;
+}
+.logo-container01{
+    padding: 30px 10px 10px 10px;
+}
+.youtube-logo{
+    width: 75px;
+    height: 75px;
+    float: left;
+    padding: 20px 20px;
+}
+.link h2{
+    font-size: 50px;
+    padding: 70px 10px 0px 10px;
+}
+.story h2{
+    font-size: 50px;
+    padding: 100px 10px 0px 10px;
+}
+.story p{
+    font-size: 25px;
+    padding: 0px 10px 0px 10px;
+}
+.status h2{
+    font-size: 50px;
+    padding: 0px 10px 0px 10px;
+}
+.status p{
+    font-size: 30px;
+    padding: 0px 10px 0px 10px;
+}
