@@ -4,13 +4,8 @@ body {
     background-color: #181a1b;
     font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
 }
-.header-list a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 15px;
-}
-.header-list a:hover {
-    text-decoration: underline;
+.main h1, .main h2, .main h3, .main p, .main a {
+    text-align: center;
 }
 .main {
     padding: 20px;
@@ -26,7 +21,6 @@ body {
     text-decoration: underline;
 }
 .main img {
-    max-width: 100%;
     height: auto;
     display: block;
     margin: 20px 0;
