@@ -26,3 +26,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+.main iframe {
+    display: block;
+    margin: 20px auto;
+}
