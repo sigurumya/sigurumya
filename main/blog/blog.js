@@ -45,6 +45,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         element.src = item.src;
                         element.alt = item.alt;
                         break;
+                    case 'html':
+                        element = document.createElement('div');
+                        element.innerHTML = item.text;
+                        break;
                 }
                 blogContent.appendChild(element);
             });
