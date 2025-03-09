@@ -18,20 +18,32 @@
           .then(response => response.json())
           .then(data => {
             const blogList = document.getElementById('blog-list');
-            data.forEach(blog => {
-              const blogItem = document.createElement('div');
-              blogItem.className = 'blog-item';
-              blogItem.innerHTML = `
-                <div class="blog-thumbnail">
-                  <a href="${blog.url}"><img src="${blog.thumbnail}" alt="${blog.title}のサムネイル" onerror="this.onerror=null;this.src='main/blog/thumbnails/no-image.jpg';"></a>
-                </div>
-                <div class="blog-content">
-                  <h2><a href="${blog.url}">${blog.title}</a></h2>
-                  <p>${blog.summary}</p>
-                  <p>${blog.date}</p>
-                </div>
-              `;
-              blogList.appendChild(blogItem);
+            const blogPromises = data.map(blog => {
+              return fetch(blog.Contents)
+                .then(response => response.json())
+                .then(contentData => {
+                  blog.content = contentData.content.map(item => item.text).join(' ');
+                  return blog;
+                });
+            });
+
+            Promise.all(blogPromises).then(blogs => {
+              blogs.forEach(blog => {
+                const blogItem = document.createElement('div');
+                blogItem.className = 'blog-item';
+                blogItem.innerHTML = `
+                  <div class="blog-thumbnail">
+                    <a href="${blog.url}"><img src="${blog.thumbnail}" alt="${blog.title}のサムネイル" onerror="this.onerror=null;this.src='main/blog/thumbnails/no-image.jpg';"></a>
+                  </div>
+                  <div class="blog-content">
+                    <h2><a href="${blog.url}">${blog.title}</a></h2>
+                    <p>${blog.summary}</p>
+                    <p>${blog.date}</p>
+                  </div>
+                `;
+                blogItem.dataset.content = blog.content.toLowerCase();
+                blogList.appendChild(blogItem);
+              });
             });
           })
           .catch(error => console.error('Error fetching blog data:', error));
@@ -42,7 +54,8 @@
         blogItems.forEach(item => {
           const title = item.querySelector('h2').innerText.toLowerCase();
           const summary = item.querySelector('.blog-content p').innerText.toLowerCase();
-          if (title.includes(query) || summary.includes(query)) {
+          const content = item.dataset.content;
+          if (title.includes(query) || summary.includes(query) || content.includes(query)) {
             item.style.display = '';
           } else {
             item.style.display = 'none';
