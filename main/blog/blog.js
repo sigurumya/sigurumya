@@ -3,7 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const page = path.split("/").pop();
     const jsonFile = page.replace('.html', '.json');
     fetch(jsonFile)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             const blogContent = document.getElementById('blog-content');
 
