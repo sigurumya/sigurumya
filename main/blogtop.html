@@ -23,7 +23,7 @@
               blogItem.className = 'blog-item';
               blogItem.innerHTML = `
                 <div class="blog-thumbnail">
-                  <img src="${blog.thumbnail}" alt="${blog.title}のサムネイル" onerror="this.onerror=null;this.src='main/blog/thumbnails/no-image.jpg';">
+                  <a href="${blog.url}"><img src="${blog.thumbnail}" alt="${blog.title}のサムネイル" onerror="this.onerror=null;this.src='main/blog/thumbnails/no-image.jpg';"></a>
                 </div>
                 <div class="blog-content">
                   <h2><a href="${blog.url}">${blog.title}</a></h2>
