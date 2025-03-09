@@ -26,7 +26,6 @@
                   return blog;
                 });
             });
-
             Promise.all(blogPromises).then(blogs => {
               blogs.forEach(blog => {
                 const blogItem = document.createElement('div');
@@ -55,7 +54,7 @@
           const title = item.querySelector('h2').innerText.toLowerCase();
           const summary = item.querySelector('.blog-content p').innerText.toLowerCase();
           const content = item.dataset.content;
-          if (title.includes(query) || summary.includes(query) || content.includes(query)) {
+          if (query === '' || title.includes(query) || summary.includes(query) || content.includes(query)) {
             item.style.display = '';
           } else {
             item.style.display = 'none';
