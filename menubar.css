@@ -1,49 +1,49 @@
 body{
-    margin: 0;
-    color: #ffffff;
-    background-color: #181a1b;
-    font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  margin: 0;
+  color: #ffffff;
+  background-color: #181a1b;
+  font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
 }
 .header {
-    overflow: hidden;
-    position: fixed;
-    background-color: #3d3d3d;
-    top: 0px;
-    left: 0px;
-    width: 100%;
+  overflow: hidden;
+  position: fixed;
+  background-color: #3d3d3d;
+  top: 0px;
+  left: 0px;
+  width: 100%;
 } 
 .header-logo {
-    width: 70px;
-    height: 70px;
-    float: left;
-    padding: 20px;
+  width: 70px;
+  height: 70px;
+  float: left;
+  padding: 20px;
 }
 .header-list em{
-    float: left;
-    color: #ffffff;
-    font-weight: 900;
+  float: left;
+  color: #ffffff;
+  font-weight: 900;
 }
 .header-list a{
-    color: #ffffff;
-    cursor: pointer;
-    display: block;
-    float: left;
-    padding: 43px 15px;
-    text-align: center;
-    text-decoration: none;
-    background-color: #3d3d3d;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  float: left;
+  padding: 43px 15px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #3d3d3d;
 }
 .header-list a:hover {
-    background-color: #ff9600;
-    color: black;
+  background-color: #ff9600;
+  color: black;
 }
 .header-list a.active {
-    background-color: #00acca;
-    color: black;
+  background-color: #00acca;
+  color: black;
 }
 .header-list .menuicon {
-    display: none;
-    font-weight: bold;
+  display: none;
+  font-weight: bold;
 }
 @media screen and (max-width: 1042px) {
   .header-list a:not(:first-child) {
@@ -66,5 +66,5 @@ body{
   }
 }
 .main-top{
-    padding: 110px 0px 0px 0px;
+  padding: 110px 0px 0px 0px;
 }
