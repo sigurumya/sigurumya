@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", function() {
             const title = document.createElement('h1');
             title.textContent = data.title;
             blogContent.appendChild(title);
+            
+            const subtitle = document.createElement('h2');
+            subtitle.textContent = `～ ${data.subtitle} ～`;
+            blogContent.appendChild(subtitle);
 
             const date = document.createElement('p');
             date.textContent = `投稿日: ${data.date}`;
             blogContent.appendChild(date);
-
-            const subtitle = document.createElement('h2');
-            subtitle.textContent = data.subtitle;
-            blogContent.appendChild(subtitle);
 
             data.content.forEach(item => {
                 let element;
