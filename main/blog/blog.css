@@ -33,6 +33,8 @@ body {
 }
 @media (max-width: 600px) {
     .main img {
-        max-width: 70%;
+        margin-left: 10%;
+        margin-right: 10%;
+        max-width: 60%;
     }
 }
