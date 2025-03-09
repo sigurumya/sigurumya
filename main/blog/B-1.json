@@ -4,6 +4,10 @@
     "date": "2025/03/08",
     "content": [
       {
+        "type": "html",
+        "text": "<hr>"
+      },
+      {
         "type": "h3",
         "text": "日本橋"
       },
@@ -32,6 +36,10 @@
       {
         "type": "p",
         "text": "旧約酒場（破損した箇所）"
+      },
+      {
+        "type": "html",
+        "text": "<hr>"
       },
       {
         "type": "h3",
