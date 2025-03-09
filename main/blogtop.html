@@ -23,12 +23,12 @@
               blogItem.className = 'blog-item';
               blogItem.innerHTML = `
                 <div class="blog-thumbnail">
-                  <img src="${blog.thumbnail}" alt="${blog.title}のサムネイル">
+                  <img src="${blog.thumbnail}" alt="${blog.title}のサムネイル" onerror="this.onerror=null;this.src='main/blog/thumbnails/no-image.jpg';">
                 </div>
                 <div class="blog-content">
                   <h2><a href="${blog.url}">${blog.title}</a></h2>
-                  <p>${blog.summary}</p>
                   <p>${blog.date}</p>
+                  <p>${blog.summary}</p>
                 </div>
               `;
               blogList.appendChild(blogItem);
