@@ -22,16 +22,20 @@
               const blogItem = document.createElement('div');
               blogItem.className = 'blog-item';
               blogItem.innerHTML = `
-                <h2><a href="${blog.url}">${blog.title}</a></h2>
-                <p>${blog.date}</p>
-                <p>${blog.summary}</p>
+                <div class="blog-thumbnail">
+                  <img src="${blog.thumbnail}" alt="${blog.title}のサムネイル">
+                </div>
+                <div class="blog-content">
+                  <h2><a href="${blog.url}">${blog.title}</a></h2>
+                  <p>${blog.date}</p>
+                  <p>${blog.summary}</p>
+                </div>
               `;
               blogList.appendChild(blogItem);
             });
           })
           .catch(error => console.error('Error fetching blog data:', error));
       });
-
       function searchBlogs() {
         const query = document.getElementById('search-input').value.toLowerCase();
         const blogItems = document.querySelectorAll('.blog-item');
@@ -67,7 +71,7 @@
         <input type="text" id="search-input" placeholder="ブログを検索...">
         <button onclick="searchBlogs()">検索</button>
       </div>
-      <div id="blog-list"></div>
+      <div id="blog-list" class="blog-list"></div>
     </div>
   </body>
 </html>
