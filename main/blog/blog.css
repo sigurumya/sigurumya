@@ -23,32 +23,22 @@ body {
 .main {
     padding: 20px;
 }
-
-.main-top h1, .main-top h2, .main-top h3 {
-    color: #ffcc00;
-}
-
-.main-top p {
+.main p {
     line-height: 1.6;
 }
-
-.main-top a {
+.main a {
     color: #1e90ff;
     text-decoration: none;
 }
-
-.main-top a:hover {
+.main a:hover {
     text-decoration: underline;
 }
-
-.main-top img {
+.main img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 20px 0;
-    height: 100px;
-    width: 100px;
-    max-width: 600px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
