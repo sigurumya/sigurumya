@@ -16,3 +16,39 @@ body{
 .main p{
     padding-left: 1em;
 }
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 20px);
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+}
+.blog-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+.blog-content {
+  padding: 15px;
+}
+.blog-content h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+.blog-content p {
+  margin: 10px 0;
+}
+.blog-content a {
+  color: #fff;
+  text-decoration: none;
+}
+.blog-content a:hover {
+  text-decoration: underline;
+}
