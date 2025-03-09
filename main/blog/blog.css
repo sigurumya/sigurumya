@@ -1,27 +1,11 @@
 body {
     margin: 0;
     color: #ffffff;
-    background-color: #181a1b;
+    background-color: #242728;
     font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
 }
 .main h1, .main h2, .main h3, .main p, .main a {
     text-align: center;
-}
-.main h1 {
-    font-size: 2.5em;
-    padding-bottom: 29px;
-    width: 100%;
-    font-size: 26px;
-    text-align: center;
-    background-image: linear-gradient(
-        90deg,
-        #ffffff 0%, #ffffff 45%,
-        #004a68 45%, #004a68 55%,
-        #ffffff 55%, #ffffff 100%
-    );
-    background-size: 100% 5px;
-    background-repeat: no-repeat;
-    background-position: center bottom; 
 }
 .main {
     padding: 20px;

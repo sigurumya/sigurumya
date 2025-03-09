@@ -1,32 +1,26 @@
 body {
     margin: 0;
     color: #ffffff;
-    background-color: #181a1b;
+    background-color: #242728;
     font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
 }
-
 .main {
     font-size: 25px;
 }
-
 .main a {
     color: #ffffff;
 }
-
 .main h3 {
     padding-left: 1em;
 }
-
 .main p {
     padding-left: 1em;
 }
-
 .blog-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
-
 .blog-item {
     display: flex;
     flex-direction: column;
@@ -37,41 +31,33 @@ body {
     overflow: hidden;
     text-align: left;
 }
-
 .blog-thumbnail img {
     width: 100%;
     height: auto;
 }
-
 .blog-content {
     padding: 15px;
 }
-
 .blog-content h2 {
     font-size: 1.5em;
     margin: 0;
 }
-
 .blog-content p {
     margin: 10px 0;
 }
-
 .blog-content a {
     color: #fff;
     text-decoration: none;
 }
-
 .blog-content a:hover {
     text-decoration: underline;
 }
-
 .search-bar {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 0;
 }
-
 .search-bar input[type="text"] {
     width: 300px;
     padding: 10px;
@@ -79,7 +65,6 @@ body {
     border-radius: 5px 0 0 5px;
     outline: none;
 }
-
 .search-bar button {
     padding: 10px 20px;
     border: none;
@@ -88,7 +73,6 @@ body {
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
-
 .search-bar button:hover {
     background-color: #0056b3;
 }
