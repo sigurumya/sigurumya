@@ -4,22 +4,14 @@ body {
     background-color: #181a1b;
     font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
 }
-
-.header {
-    background-color: #333;
-    padding: 10px;
-}
-
 .header-list a {
     color: #ffffff;
     text-decoration: none;
     margin-right: 15px;
 }
-
 .header-list a:hover {
     text-decoration: underline;
 }
-
 .main {
     padding: 20px;
 }

@@ -36,4 +36,4 @@ function toggleMenu(event) {
 
 window.addEventListener("click", toggleMenu);
 window.addEventListener("touchstart", toggleMenu);
-//window.location.assign("https://gensokyosciencealliance.glitch.me/main/maintenance.html");
+//window.location.assign("https://sigurumya.github.io/sigurumya/main/maintenance.html");

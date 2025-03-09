@@ -16,4 +16,4 @@ window.addEventListener("load", () => {
   fetchData();
   setInterval(fetchData, 30000);
 });
-window.location.assign("https://sigurumya.glitch.me/index.html");
+window.location.assign("https://sigurumya.github.io/sigurumya/");
