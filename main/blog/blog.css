@@ -1,6 +1,49 @@
-body{
+body {
     margin: 0;
     color: #ffffff;
     background-color: #181a1b;
     font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
+}
+
+.header {
+    background-color: #333;
+    padding: 10px;
+}
+
+.header-list a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.header-list a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    padding: 20px;
+}
+
+.main-top h1, .main-top h2, .main-top h3 {
+    color: #ffcc00;
+}
+
+.main-top p {
+    line-height: 1.6;
+}
+
+.main-top a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.main-top a:hover {
+    text-decoration: underline;
+}
+
+.main-top img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
 }

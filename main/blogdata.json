@@ -1,25 +1,9 @@
 [
   {
-    "id": 3,
-    "title": "三番目のブログ記事",
-    "date": "2025-03-05",
-    "summary": "これは三番目のブログ記事の概要です。",
-    "url": "main/blog/B-3.html",
-    "thumbnail": "main/blog/thumbnails/B-3.jpg"
-  },
-  {
-    "id": 2,
-    "title": "二番目のブログ記事",
-    "date": "2025-03-05",
-    "summary": "これは二番目のブログ記事の概要です。",
-    "url": "main/blog/B-2.html",
-    "thumbnail": "main/blog/thumbnails/B-2.jpg"
-  },
-  {
     "id": 1,
-    "title": "最初のブログ記事",
-    "date": "2025-03-01",
-    "summary": "これは最初のブログ記事の概要です。",
+    "title": "外出報告",
+    "date": "2025-03-08",
+    "summary": "梅田と日本橋に行ったのでその報告です（テストも兼ねてる）",
     "url": "main/blog/B-1.html",
     "thumbnail": "main/blog/thumbnails/B-1.jpg"
   }
