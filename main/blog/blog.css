@@ -9,9 +9,9 @@ body {
 }
 .main {
     padding: 20px;
+    background-color: black;
     margin-left: 5%;
     margin-right: 5%;
-    background-color: black;
 }
 .main p {
     line-height: 1.6;
