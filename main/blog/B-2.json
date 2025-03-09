@@ -8,6 +8,10 @@
         "text": "なにかしらのタイトル"
       },
       {
+        "type": "html",
+        "text": "<iframe src=\"https://store.steampowered.com/widget/2992570/\" frameborder=\"0\" width=\"80%\" height=\"190\"></iframe>"
+      },
+      {
         "type": "img",
         "src": "画像URL",
         "alt": "画像の説明"
