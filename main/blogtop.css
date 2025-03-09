@@ -13,20 +13,21 @@
 .blog-list {
     display: flex;
     flex-wrap: wrap;
+    background-color: #181a1b;
     gap: 20px;
 }
 .blog-item {
     display: flex;
     flex-direction: column;
     width: calc(50% - 20px);
-    background-color: #333;
-    color: #fff;
-    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
     overflow: hidden;
     text-align: left;
 }
 .blog-thumbnail img {
     width: 100%;
+    border-radius: 10px;
     height: auto;
 }
 .blog-content {
