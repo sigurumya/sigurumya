@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const path = window.location.pathname;
     const page = path.split("/").pop();
-    const jsonFile = page.replace('.html', '.json');
+    const jsonFile = `main/blog/${page.replace('.html', '.json')}`;
     fetch(jsonFile)
         .then(response => {
             if (!response.ok) {
