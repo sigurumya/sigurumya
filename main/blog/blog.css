@@ -31,12 +31,12 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-@media (max-width: 600px) {
+@media (max-width: 541px) {
     .main img {
-        max-width: 50%;
+        max-width: 40%;
     }
     .main{
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
     }
 }
