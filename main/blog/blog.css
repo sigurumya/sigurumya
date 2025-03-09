@@ -9,6 +9,7 @@ body {
 }
 .main {
     padding: 20px;
+    margin: 0px,5%;
     background-color: black;
 }
 .main p {
@@ -28,4 +29,9 @@ body {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+@media (max-width: 600px) {
+    .main img {
+        max-width: 90%;
+    }
 }
