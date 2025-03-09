@@ -46,4 +46,8 @@ body {
     height: auto;
     display: block;
     margin: 20px 0;
+    /* 追加: 画像の最大幅を制限 */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
