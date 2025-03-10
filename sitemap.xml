@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <url>
   <loc>https://sigurumya.github.io/sigurumya/main/profile.html</loc>
-  <image:image>
-    <image:loc>https://sigurumya.github.io/sigurumya/sigurumya-logo.webp</image:loc>
-  </image:image>
   <priority>0.8</priority>
   <lastmod>2025-03-09T23:00:29+09:00</lastmod>
 </url>
@@ -54,42 +51,22 @@
 </url>
 <url>
   <loc>https://sigurumya.github.io/sigurumya/main/blog/B-1.html</loc>
-  <news:news>
-    <news:publication>
-      <news:name>外出報告</news:name>
-      <news:language>ja</news:language>
-    </news:publication>
-    <news:publication_date>2025-03-09</news:publication_date>
-    <news:title>日本橋と梅田に行ってきました</news:title>
-  </news:news>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://sigurumya.github.io/sigurumya/main/series/S-1.html</loc>
-  <image:image>
-    <image:loc>https://sigurumya.github.io/sigurumya/S-1-logo.webp</image:loc>
-  </image:image>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://sigurumya.github.io/sigurumya/main/series/S-2.html</loc>
-  <image:image>
-    <image:loc>https://sigurumya.github.io/sigurumya/S-2-logo.webp</image:loc>
-  </image:image>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://sigurumya.github.io/sigurumya/main/series/S-3.html</loc>
-  <image:image>
-    <image:loc>https://sigurumya.github.io/sigurumya/S-3-logo.webp</image:loc>
-  </image:image>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://sigurumya.github.io/sigurumya/main/series/S-4.html</loc>
-  <image:image>
-    <image:loc>https://sigurumya.github.io/sigurumya/S-4-logo.webp</image:loc>
-  </image:image>
   <priority>0.7</priority>
 </url>
 </urlset>
