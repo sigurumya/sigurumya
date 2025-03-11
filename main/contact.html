@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>しぐるみゃのサイト｜お問い合わせ</title>
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
@@ -12,8 +12,8 @@
     <script src="menubar.js"></script>
     <link rel="stylesheet" href="menubar.css">
     <link rel="stylesheet" href="main/contact.css">
-  </head>
-  <body>
+　</head>
+　<body>
     <header class="header">
       <div class="header-list">
         <a href="index.html">ホーム</a>
@@ -30,8 +30,16 @@
       <div class="main-top"></div>
       <h2>お問い合わせはメールアドレスでお願いします</h2>
       <address>メールアドレス：<a href="mailto:sigurumya@gmail.com">sigurumya@gmail.com</a></address>
-      <p>また、下のGoogleフォームでも受け付けております</p>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEpaFLKLuTzk2fn33lpDhGD0bM9y0qr5LwpVy40xCCfu5fAQ/viewform?embedded=true" width="100%" height="725" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+      <p><s>また、下のお問い合わせフォームでも受け付けております</s></p>
+      <form action="https://sigurumya.github.io/sigurumya/main/form-handler.php" method="post">
+        <label for="name">名前:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">メールアドレス:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">メッセージ:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        <input type="submit" value="送信">
+      </form>
     </div>
-  </body>
-</html>
+　</body>
+</html>
