@@ -1,2 +1,4 @@
-plugins:
-  - jekyll-sitemap
+sitemap:
+    path: sitemap.xml
+    template: ./sitemap_auto.xml
+    rel: false
