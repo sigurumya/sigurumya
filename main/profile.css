@@ -23,6 +23,11 @@
 .profile h2{
     padding: 0px 0px 0px 10px;
 }
+.profile p{
+    padding: 0px 0px 0px 10px;
+    padding-left: 1em;
+    font-size: 35px;
+}
 .profiles p{
     padding: 0px 0px 0px 10px;
     padding-left: 1em;
