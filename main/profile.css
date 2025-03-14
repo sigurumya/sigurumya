@@ -33,6 +33,9 @@
     padding-left: 1em;
     font-size: 35px;
 }
+.profiles a{
+    color: #ffffff;
+}
 .pcspecs{
     font-size: 30px;
 }
