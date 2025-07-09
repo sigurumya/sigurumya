@@ -1,0 +1,43 @@
+{
+    "title": "タイトル",
+    "subtitle": "サブタイトル",
+    "date": "日時",
+    "content": [
+      {
+        "type": "html",
+        "text": "<hr>"
+      },
+      {
+        "type": "h3",
+        "text": "なにかしらのタイトル"
+      },
+      {
+        "type": "html",
+        "text": "<iframe src=\"https://store.steampowered.com/widget/2992570/\" frameborder=\"0\" width=\"80%\" height=\"190\"></iframe>"
+      },
+      {
+        "type": "img",
+        "src": "画像URL",
+        "alt": "画像の説明"
+      },
+      {
+        "type": "p",
+        "text": "さらに詳細な内容を記入します。"
+      },
+      {
+        "type": "a",
+        "href": "リンク先URL",
+        "text": "リンクテキスト"
+      },
+      {
+        "type": "video",
+        "src": "動画URL",
+        "controls": true
+      },
+      {
+        "type": "img",
+        "src": "画像URL",
+        "alt": "画像の説明"
+      }
+    ]
+  }

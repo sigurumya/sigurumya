@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>シリーズ一覧 - しぐるみゃ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="description" content="しぐるみゃのシリーズの一覧です">
+    <meta name="author" content="しぐるみゃ">
+    <meta name="keywords" content="しぐるみゃ,しぐるー,シリーズ,シリーズ一覧,シリーズ情報">
+    <link rel="icon" href="sigurumya-logo.webp"/>
+    <base href="https://sigurumya.github.io/sigurumya/">
+    <script src="menubar.js"></script>
+    <script src="footer.js"></script>
+    <link rel="stylesheet" href="sitestyle.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="main/series.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-list">
+        <a href="index.html">ホーム</a>
+        <a href="main/profile.html">プロフィール</a>
+        <a href="main/series.html">シリーズ一覧</a>
+        <a href="main/blogtop.html">ブログ一覧</a>
+        <a href="main/contact.html">お問い合わせ</a>
+        <a href="main/group.html">所属しているグループ</a>
+        <a class="menuicon">≡</a>
+      </div>
+    </header>
+      <div class="main">
+        <div class="main-top"></div>
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="検索…　名称・メンバー名で検索できます">
+        </div>
+        <script>
+        document.getElementById('search-bar').addEventListener('input', function () {
+          const query = this.value.toLowerCase();
+          const statusList = document.querySelectorAll('.status'); // .status 要素を取得
+
+          statusList.forEach(status => {
+            const logoContainer = status.querySelector('.logo-container01');
+            const name = logoContainer.getAttribute('data-name').toLowerCase();
+            const members = logoContainer.getAttribute('data-members').toLowerCase();
+
+            if (name.includes(query) || members.includes(query) || query === '') {
+              status.style.display = ''; // 表示
+            } else {
+              status.style.display = 'none'; // 非表示
+            }
+          });
+        });
+        </script>
+        <div class="status-list">
+          <div class="status">
+            <div class="logo-container01" data-name="よいやみだんさーず" data-members="ルーミア,フラン,るーみあ,ふらん,フランドール・スカーレット,ふらんどーる・すかーれっと,スカーレット,すかーれっと">
+              <img class="logo" src="main/series/thumbnails/S-1-logo.webp" alt="S-1-logo">
+            </div>
+            <h2 class="name">名称：ヨイヤミダンサーズ</h2>
+            <div class="link">
+              <h2><a href="main/series/S-1.html">詳細はこちらから</a></h2>
+              <a href="https://youtube.com/playlist?list=PL17LLdBxNb8IrNQ4ceJ6pUqllK8p8sBGq&si=o63Dx-srMI5PCcYz"><img class="youtube-logo" src="https://www.youtube.com/s/desktop/e208051c/img/logos/favicon_144x144.png" alt="youtube-logo"></a>
+            </div>
+          </div>
+          <div class="status">
+            <div class="logo-container01" data-name="サティスファクトリー,さてぃすふぁくとりー" data-members="宇佐見蓮子,うさみれんこ,宇佐見,蓮子,うさみ,れんこ,マエリベリー・ハーン,まえりべりー・はーん,メリー,めりー,マエリベリー,ハーン,まえりべりー,はーん">
+              <img class="logo" src="main/series/thumbnails/S-2-logo.webp" alt="S-2-logo">
+            </div>
+            <h2 class="name">名称：Satisfactory</h2>
+            <div class="link">
+              <h2><a href="main/series/S-2.html">詳細はこちらから</a></h2>
+              <a href="https://www.youtube.com/playlist?list=PL17LLdBxNb8JqBk0WcinS5w9FTbOGmmtD"><img class="youtube-logo" src="https://www.youtube.com/s/desktop/e208051c/img/logos/favicon_144x144.png" alt="youtube-logo"></a>
+            </div>
+          </div>
+          <div class="status">
+            <div class="logo-container01" data-name="しょーと,ぴーしー,かいせつ,しりーず,ぱそこん,パソコン,ピーシー" data-members="ルーミア,るーみあ">
+              <img class="logo" src="main/series/thumbnails/S-3-logo.webp" alt="S-3-logo">
+            </div>
+            <h2 class="name">名称：ショートPC解説シリーズ</h2>
+            <div class="link">
+              <h2><a href="main/series/S-3.html">詳細はこちらから</a></h2>
+              <a href="https://youtube.com/playlist?list=PL17LLdBxNb8LODI5S_L4SudTJSpyILo1B&si=H8BktQhKumxwxQ7s"><img class="youtube-logo" src="https://www.youtube.com/s/desktop/e208051c/img/logos/favicon_144x144.png" alt="youtube-logo"></a>
+            </div>
+          </div>
+          <div class="status">
+            <div class="logo-container01" data-name="ぽーたる,ポータル" data-members="十六夜,咲夜,いざよい,さくや,魂魄妖夢,魂魄,妖夢,こんぱく,ようむ,こんぱくようむ">
+              <img class="logo" src="main/series/thumbnails/S-4-logo.webp" alt="S-4-logo">
+            </div>
+            <h2 class="name">名称：Portal</h2>
+            <div class="link">
+              <h2><a href="main/series/S-4.html">詳細はこちらから</a></h2>
+              <a href="https://youtube.com/playlist?list=PL17LLdBxNb8JpNL8c6lGyWjZqkDC0tRPx&si=Kg2T92RgKHDTpRe_"><img class="youtube-logo" src="https://www.youtube.com/s/desktop/e208051c/img/logos/favicon_144x144.png" alt="youtube-logo"></a>
+            </div>
+          </div>
+          <div class="status">
+            <div class="logo-container01" data-name="ふらんのざっかんきろく" data-members="フラン,ふらん,フランドール・スカーレット,ふらんどーる・すかーれっと,スカーレット,すかーれっと,こいし,古明地こいし,こめいじ,こめいじこいし">
+              <img class="logo" src="main/series/thumbnails/S-5-logo.webp" alt="S-5-logo">
+            </div>
+            <h2 class="name">名称：フランの雑感記録</h2>
+            <div class="link">
+              <h2><a href="main/series/S-5.html">詳細はこちらから</a></h2>
+              <a href="https://www.youtube.com/playlist?list=PL17LLdBxNb8LQMWfvYPJVwasi2Iga4Gj4"><img class="youtube-logo" src="https://www.youtube.com/s/desktop/e208051c/img/logos/favicon_144x144.png" alt="youtube-logo"></a>
+            </div>
+          </div>
+          <!--次作品の情報を追加する場合は以下のテンプレートをコピーして貼り付けてください。
+          <div class="status">
+            <div class="logo-container01" data-name="N/A" data-members="N/A">
+              <img class="logo" src="main/series/thumbnails/S-N/A-logo.webp" alt="S-N/A-logo">
+            </div>
+            <h2 class="name">名称：N/A</h2>
+            <div class="link">
+              <h2><a href="main/series/S-N/A.html">詳細はこちらから</a></h2>
+              <a href="N/A"><img class="youtube-logo" src="https://www.youtube.com/s/desktop/e208051c/img/logos/favicon_144x144.png" alt="youtube-logo"></a>
+            </div>
+          </div>
+          -->
+        </div>
+      </div>
+    </body>
+    <footer class="footer">
+      <div class="footer-info">
+        <p>このサイトは「しぐるみゃ」が運営しています</p>
+        <p>このサイトに関するお問い合わせは<a href="main/contact.html">こちらから</a></p>
+      </div>
+      <div class="footer-sitemap">
+        <p>サイトマップ</p>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="main/profile.html">プロフィール</a></li>
+          <li><a href="main/series.html">シリーズ一覧</a></li>
+          <li><a href="main/blogtop.html">ブログ一覧</a></li>
+          <li><a href="main/contact.html">お問い合わせ</a></li>
+          <li><a href="main/group.html">所属しているグループ</a></li>
+          <li><a href="main/patchnote.html">パッチノート</a></li>
+          <li><a href="main/fileupload.html">ファイルアップロード</a></li>
+        </ul>
+      </div>
+    </footer>
+</html>

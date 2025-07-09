@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ファイルアップロード一覧 - しぐるみゃ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="description" content="しぐるみゃのアップロードファイルの一覧です">
+    <meta name="author" content="しぐるみゃ">
+    <meta name="keywords" content="しぐるみゃ,しぐるー,画像,フリー,ファイル,アップロード,ファイルアップロード">
+    <link rel="icon" href="sigurumya-logo.webp"/>
+    <base href="https://sigurumya.github.io/sigurumya/">
+    <script src="menubar.js"></script>
+    <script src="footer.js"></script>
+    <link rel="stylesheet" href="sitestyle.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="main/fileupload.css">
+  </head>
+  <body>
+    <header class="header">
+    <div class="header-list">
+      <a href="index.html">ホーム</a>
+      <a href="main/profile.html">プロフィール</a>
+      <a href="main/series.html">シリーズ一覧</a>
+      <a href="main/blogtop.html">ブログ一覧</a>
+      <a href="main/contact.html">お問い合わせ</a>
+      <a href="main/group.html">所属しているグループ</a>
+      <a class="menuicon">≡</a>
+    </div>
+    </header>
+    <div class="main">
+      <div class="main-top"></div>
+      <div class="status">
+        <h1>ファイルアップロード一覧</h1>
+        <select id="category-select">
+          <option value="all">すべて</option>
+          <option value="eerie2">E.E.R.I.E2</option>
+          <option value="picture">画像</option>
+        </select>
+      </div>
+      <div class="status">
+        <h1>一覧</h1>
+        <div class="fileupload" data-category="eerie2,all">
+          <h2>E.E.R.I.E2日本語化ファイル Ver.1.9.3 用</h2>
+          <a href="main/fileuploadspace/EERIE2_日本語化ファイル_Ver_1_9_3_.zip">ダウンロード</a>
+        </div>
+        <div class="fileupload" data-category="eerie2,all">
+          <h2>E.E.R.I.E2日本語化ファイル Ver.1.1 用</h2>
+          <a href="main/fileuploadspace/EERIE2_日本語化ファイル_Ver_1_1_.zip">ダウンロード</a>
+        </div>
+        <div class="fileupload" data-category="picture,all">
+          <h2>NO IMAGE フリー画像</h2>
+          <p>利用用途問わず、ご使用いただけます</p>
+          <a href="main/fileuploadspace/NO IMAGE.jpg" download>ダウンロード</a>
+        </div>
+        <div class="fileupload" data-category="picture,all">
+          <h2>NO SCREEN OUTPUT フリー画像</h2>
+          <p>利用用途問わず、ご使用いただけます</p>
+          <a href="main/fileuploadspace/NO SCREEN OUTPUT.jpg" download>ダウンロード</a>
+        </div>
+        <script>
+          const select = document.getElementById('category-select');
+          const uploads = document.querySelectorAll('.fileupload');
+          function updateCategory(val) {
+            select.value = val;
+            uploads.forEach(div => {
+              const categories = div.dataset.category.split(',');
+              if (val === 'all' || categories.includes(val)) {
+                div.style.display = '';
+              } else {
+                div.style.display = 'none';
+              }
+            });
+          }
+          select.addEventListener('change', function() {
+            updateCategory(this.value);
+            location.hash = this.value;
+          });
+          window.addEventListener('DOMContentLoaded', () => {
+            const hash = location.hash.replace('#', '');
+            if (hash && select.querySelector(`option[value="${hash}"]`)) {
+              updateCategory(hash);
+            } else {
+              updateCategory('all');
+            }
+          });
+        </script>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-info">
+        <p>このサイトは「しぐるみゃ」が運営しています</p>
+        <p>このサイトに関するお問い合わせは<a href="main/contact.html">こちらから</a></p>
+      </div>
+      <div class="footer-sitemap">
+        <p>サイトマップ</p>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="main/profile.html">プロフィール</a></li>
+          <li><a href="main/series.html">シリーズ一覧</a></li>
+          <li><a href="main/blogtop.html">ブログ一覧</a></li>
+          <li><a href="main/contact.html">お問い合わせ</a></li>
+          <li><a href="main/group.html">所属しているグループ</a></li>
+          <li><a href="main/patchnote.html">パッチノート</a></li>
+          <li><a href="main/fileupload.html">ファイルアップロード</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

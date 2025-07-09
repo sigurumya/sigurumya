@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ブログ一覧 - しぐるみゃブログ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="description" content="しぐるみゃのブログ一覧です">
+    <meta name="author" content="しぐるみゃ">
+    <meta name="keywords" content="しぐるみゃ,しぐるー,ブログ一覧,ブログ情報,ブログ,記事,記事一覧,記事情報,記事一覧情報">
+    <link rel="icon" href="sigurumya-logo.webp"/>
+    <base href="https://sigurumya.github.io/sigurumya/">
+    <script src="menubar.js"></script>
+    <script src="footer.js"></script>
+    <link rel="stylesheet" href="sitestyle.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="main/blogtop.css">
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch('main/blogdata.json')
+        .then(response => response.json())
+        .then(data => {
+          const blogList = document.getElementById('blog-list');
+          const tagSet = new Set();
+          const blogPromises = data.map(blog => {
+            if (blog.tags) blog.tags.forEach(tag => tagSet.add(tag));
+            return fetch(blog.Contents)
+              .then(response => response.json())
+              .then(contentData => {
+                blog.content = contentData.content.map(item => item.text).join(' ');
+                return blog;
+              });
+          });
+          Promise.all(blogPromises).then(blogs => {
+            blogs.forEach(blog => {
+              const blogItem = document.createElement('div');
+              blogItem.className = 'blog-item';
+              blogItem.innerHTML = `
+                <div class="blog-thumbnail">
+                  <a href="${blog.url}"><img src="${blog.thumbnail}" alt="${blog.title}のサムネイル" onerror="this.onerror=null;this.src='main/blog/thumbnails/no-image.jpg';"></a>
+                </div>
+                <div class="blog-content">
+                  <h2><a href="${blog.url}">${blog.title}</a></h2>
+                  <p>${blog.summary}</p>
+                  <p>${blog.date}</p>
+                  <div class="tags">${(blog.tags || []).map(tag => `<span class="tag">${tag}</span>`).join(' ')}</div>
+                </div>
+              `;
+              blogItem.dataset.title = blog.title.toLowerCase();
+              blogItem.dataset.summary = blog.summary.toLowerCase();
+              blogItem.dataset.content = blog.content.toLowerCase();
+              blogItem.dataset.tags = (blog.tags || []).join(',');
+              blogList.appendChild(blogItem);
+            });
+            // タグボタン生成
+            const tagButtonsDiv = document.getElementById('tag-buttons');
+            let selectedTags = [];
+            tagButtonsDiv.innerHTML = "";
+            Array.from(tagSet).sort().forEach(tag => {
+              const btn = document.createElement('button');
+              btn.type = "button";
+              btn.className = "tag-btn";
+              btn.textContent = tag;
+              btn.dataset.tag = tag;
+              btn.onclick = function() {
+                if (selectedTags.includes(tag)) {
+                  selectedTags = selectedTags.filter(t => t !== tag);
+                  btn.classList.remove('selected');
+                } else {
+                  selectedTags.push(tag);
+                  btn.classList.add('selected');
+                }
+                searchBlogs();
+              };
+              tagButtonsDiv.appendChild(btn);
+            });
+            // 検索ボタンもタグボタン式に対応
+            window.searchBlogs = function() {
+              const query = document.getElementById('search-input').value.toLowerCase();
+              const blogItems = document.querySelectorAll('.blog-item');
+              blogItems.forEach(item => {
+                const title = item.dataset.title;
+                const summary = item.dataset.summary;
+                const content = item.dataset.content;
+                const tags = item.dataset.tags.split(',');
+                const tagMatch = selectedTags.length === 0 || selectedTags.every(tag => tags.includes(tag));
+                const keywordMatch = !query || title.includes(query) || summary.includes(query) || content.includes(query);
+                if (tagMatch && keywordMatch) {
+                  item.style.display = '';
+                } else {
+                  item.style.display = 'none';
+                }
+              });
+            };
+          });
+        })
+        .catch(error => console.error('Error fetching blog data:', error));
+    });
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-list">
+        <a href="index.html">ホーム</a>
+        <a href="main/profile.html">プロフィール</a>
+        <a href="main/series.html">シリーズ一覧</a>
+        <a href="main/blogtop.html">ブログ一覧</a>
+        <a href="main/contact.html">お問い合わせ</a>
+        <a href="main/group.html">所属しているグループ</a>
+        <a class="menuicon">≡</a>
+      </div>
+    </header>
+    <div class="main">
+      <div class="main-top">
+        <!-- ここには何も記述しない -->
+      </div>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="キーワード検索...">
+        <button onclick="searchBlogs()">検索</button>
+        <div id="tag-buttons" class="tag-buttons"></div>
+      </div>
+      <span id="blog-list" class="blog-list"></span>
+    </div>
+    <footer class="footer">
+      <div class="footer-info">
+        <p>このサイトは「しぐるみゃ」が運営しています</p>
+        <p>このサイトに関するお問い合わせは<a href="main/contact.html">こちらから</a></p>
+      </div>
+      <div class="footer-sitemap">
+        <p>サイトマップ</p>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="main/profile.html">プロフィール</a></li>
+          <li><a href="main/series.html">シリーズ一覧</a></li>
+          <li><a href="main/blogtop.html">ブログ一覧</a></li>
+          <li><a href="main/contact.html">お問い合わせ</a></li>
+          <li><a href="main/group.html">所属しているグループ</a></li>
+          <li><a href="main/patchnote.html">パッチノート</a></li>
+          <li><a href="main/fileupload.html">ファイルアップロード</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

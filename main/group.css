@@ -1,0 +1,42 @@
+.logo-container01{
+    padding: 30px 10px 10px 10px;
+}
+.logo-container02{
+    padding: 110px 10px 10px 10px;
+}
+.logo{
+    width: 250px;
+    height: 250px;
+    float: left;
+    box-shadow: 10px 10px 0 #ff9600;
+}
+.name{
+    padding: 25px 0px 0px 285px;
+    font-size: 25px;
+}
+.name em{
+    color: #ffee00;
+    font-weight: bold;
+}
+.url{
+    clear: right;
+    display: block;
+    padding: 0px 0px 0px 280px;
+}
+.gsa-info{
+    padding: 100px 0px 0px 285px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.youtube-logo{
+    width: 75px;
+    height: 75px;
+    float: left;
+    padding: 10px 10px;
+}
+.saite-logo{
+    width: 75px;
+    height: 75px;
+    float: left;
+    padding: 10px 10px;
+}

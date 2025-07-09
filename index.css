@@ -1,0 +1,62 @@
+.main {
+  padding: 20px;
+  text-align: center;
+}
+.story, .status, .credit ,.link {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #181a1b;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.status.news {
+  border: 2px solid #ff9600;
+  background: #232425;
+}
+.status.news h2 {
+  color: #ff9600;
+}
+h2 {
+  color: #ff9600;
+  margin-bottom: 10px;
+}
+.main a {
+  color: #ff9600;
+  text-decoration: none;
+}
+.main a:hover {
+  text-decoration: underline;
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 200px; /* 映像の高さを調整 */
+  overflow: hidden;
+}
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 映像をコンテナにフィット */
+}
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  font-family: "Avenir Next", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  text-shadow: 0px 0px 15px rgb(0 0 0); /* 文字に影を追加 */
+}
+.overlay-text h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+.overlay-text p {
+  font-size: 1.2em;
+  margin: 0;
+}

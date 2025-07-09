@@ -1,0 +1,102 @@
+/* メインコンテンツ */
+.main {
+  padding: 20px;
+  text-align: center;
+}
+
+.logo-container01 {
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px #ff9600;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #ff9600;
+}
+
+.url a img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.url a img:hover {
+  transform: scale(1.2);
+}
+
+/* セクション */
+.story, .status, .credit ,.link {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #181a1b;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  color: #ff9600;
+  margin-bottom: 10px;
+}
+
+.main a {
+  color: #ff9600;
+  text-decoration: none;
+}
+
+.main a:hover {
+  text-decoration: underline;
+}
+
+/* 登場人物セクション */
+.characters {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.character {
+  text-align: center;
+  color: #ffffff;
+}
+
+.character img {
+  width: auto;
+  height: 425px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.character img:hover {
+  transform: scale(1.1);
+}
+
+.character p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #ff9600;
+}
+
+@media only screen and (min-width: 768px) {
+  span[id] {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    margin-top: -60px;
+    padding-top: 60px;
+  }
+}

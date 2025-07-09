@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>しぐるみゃのサイト</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="description" content="しぐるみゃのホームページです">
+    <meta name="author" content="しぐるみゃ">
+    <meta name="keywords" content="しぐるみゃ,しぐるー,ホーム,ホームページ,ホーム情報">
+    <link rel="icon" href="sigurumya-logo.webp"/>
+    <base href="https://sigurumya.github.io/sigurumya/">
+    <script src="menubar.js"></script>
+    <script src="footer.js"></script>
+    <link rel="stylesheet" href="sitestyle.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-list">
+        <a href="index.html">ホーム</a>
+        <a href="main/profile.html">プロフィール</a>
+        <a href="main/series.html">シリーズ一覧</a>
+        <a href="main/blogtop.html">ブログ一覧</a>
+        <a href="main/contact.html">お問い合わせ</a>
+        <a href="main/group.html">所属しているグループ</a>
+        <a class="menuicon">≡</a>
+      </div>
+    </header>
+    <div class="main">
+      <div class="main-top"></div>
+      <div class="video-container">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="home-video.mp4" type="video/mp4">
+          お使いのブラウザは動画をサポートしていません。
+          <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const video = document.querySelector('video');
+            video.muted = true;
+            video.play().catch((error) => {
+              console.error('動画の自動再生に失敗しました:', error);
+            });
+          });
+          </script>
+        </video>
+        <div class="overlay-text">
+          <h1>ようこそ！</h1>
+          <p>しぐるみゃのサイトへ</p>
+        </div>
+      </div>
+      <div class="status">
+        <h3 class="name">上のヘッダーから行きたいページを選んでください</h3>
+      </div>
+      <div class="status">
+        <h2>このサイトについて</h2>
+        <p>定期的にメンテナンスしております、時間帯などは決まっておりません<br>
+           また、メンテナンス中はサイトは使用できません、ご了承くださいませ</p>
+      </div>
+      <div class="status">
+        <h2>お知らせ</h2>
+        <p>パッチノート一覧を公開！<a href="main/patchnote.html">こちらから</a></p>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-info">
+        <p>このサイトは「しぐるみゃ」が運営しています</p>
+        <p>このサイトに関するお問い合わせは<a href="main/contact.html">こちらから</a></p>
+      </div>
+      <div class="footer-sitemap">
+        <p>サイトマップ</p>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="main/profile.html">プロフィール</a></li>
+          <li><a href="main/series.html">シリーズ一覧</a></li>
+          <li><a href="main/blogtop.html">ブログ一覧</a></li>
+          <li><a href="main/contact.html">お問い合わせ</a></li>
+          <li><a href="main/group.html">所属しているグループ</a></li>
+          <li><a href="main/patchnote.html">パッチノート</a></li>
+          <li><a href="main/fileupload.html">ファイルアップロード</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script>
+      /**
+       * 最新ニュースを表示する関数
+       * @param {Object} options - オプション
+       * @param {string} options.tag - 抽出するタグ名（例："ニュース"）
+       * @param {number} options.count - 表示する件数（例：1）
+       * @param {Element} options.target - 挿入先の親要素（例：document.querySelector('.main')）
+       * @param {Element} options.insertAfter - この要素の直後に挿入（例：document.querySelector('.status')）
+       */
+      function showLatestNews({ tag = "ニュース", count = 1, target, insertAfter }) {
+        fetch("main/blogdata.json")
+          .then(res => res.json())
+          .then(data => {
+            const newsList = data
+              .filter(blog => blog.tags && blog.tags.includes(tag))
+              .sort((a, b) => new Date(b.date) - new Date(a.date));
+            if (newsList.length === 0) return;
+
+            // 複数件表示対応
+            const newsDiv = document.createElement("div");
+            newsDiv.className = "status news";
+            newsDiv.innerHTML = `<h2>最新${tag}</h2>` +
+              newsList.slice(0, count).map(news => `
+                <p>
+                  <a href="${news.url}" style="font-weight:bold;">${news.title}</a>
+                  <span style="font-size:0.9em;color:#aaa;">（${news.date}）</span><br>
+                  ${news.summary}
+                </p>
+              `).join("");
+
+            // 挿入先指定
+            if (target && insertAfter) {
+              insertAfter.parentNode.insertBefore(newsDiv, insertAfter.nextSibling);
+            } else if (target) {
+              target.appendChild(newsDiv);
+            } else {
+              document.body.appendChild(newsDiv);
+            }
+          });
+        }
+      // 例：.main内の最初の.statusの直後に「ニュース」1件を表示
+      document.addEventListener("DOMContentLoaded", function() {
+        const main = document.querySelector(".main");
+        const firstStatus = main.querySelector(".status");
+        showLatestNews({
+          tag: "ニュース",
+          count: 3,
+          target: main,
+          insertAfter: firstStatus
+        });
+      });
+    </script>
+  </body>
+</html>
