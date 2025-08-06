@@ -36,13 +36,15 @@
               const blogItem = document.createElement('div');
               blogItem.className = 'blog-item';
               blogItem.innerHTML = `
+                <a href="${blog.url}">
                 <div class="blog-thumbnail">
-                  <a href="${blog.url}"><img src="${blog.thumbnail}" alt="${blog.title}のサムネイル" onerror="this.onerror=null;this.src='main/blog/thumbnails/no-image.webp';"></a>
+                  <img src="${blog.thumbnail}" alt="${blog.title}のサムネイル" onerror="this.onerror=null;this.src='main/blog/thumbnails/no-image.webp';">
                 </div>
                 <div class="blog-content">
-                  <h2><a href="${blog.url}">${blog.title}</a></h2>
+                  <h2>${blog.title}</h2>
                   <p>${blog.summary}</p>
                   <p>${blog.date}</p>
+                  </a>
                   <div class="tags">${(blog.tags || []).map(tag => `<span class="tag">${tag}</span>`).join(' ')}</div>
                 </div>
               `;
