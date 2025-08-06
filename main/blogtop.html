@@ -59,22 +59,44 @@
             let selectedTags = [];
             tagButtonsDiv.innerHTML = "";
             Array.from(tagSet).sort().forEach(tag => {
+              const checkbox = document.createElement('input');
+              checkbox.type = 'checkbox';
+              checkbox.className = 'tag-checkbox';
+              checkbox.dataset.tag = tag;
               const btn = document.createElement('button');
               btn.type = "button";
               btn.className = "tag-btn";
               btn.textContent = tag;
               btn.dataset.tag = tag;
+              checkbox.onchange = function() {
+                if (checkbox.checked) {
+                  if (!selectedTags.includes(tag)) {
+                    selectedTags.push(tag);
+                    btn.classList.add('selected');
+                  }
+                } else {
+                  selectedTags = selectedTags.filter(t => t !== tag);
+                  btn.classList.remove('selected');
+                }
+                searchBlogs();
+              };
               btn.onclick = function() {
                 if (selectedTags.includes(tag)) {
                   selectedTags = selectedTags.filter(t => t !== tag);
                   btn.classList.remove('selected');
+                  checkbox.checked = false;
                 } else {
                   selectedTags.push(tag);
                   btn.classList.add('selected');
+                  checkbox.checked = true;
                 }
                 searchBlogs();
               };
-              tagButtonsDiv.appendChild(btn);
+              const wrapper = document.createElement('span');
+              wrapper.className = 'tag-btn-wrapper';
+              wrapper.appendChild(checkbox);
+              wrapper.appendChild(btn);
+              tagButtonsDiv.appendChild(wrapper);
             });
             // 検索ボタンもタグボタン式に対応
             window.searchBlogs = function() {
