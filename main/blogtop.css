@@ -89,6 +89,13 @@ span#blog-list.blog-list {
   background: #ffa733;
   color: #232425;
 }
+.tag-checkbox {
+  width: 22px;
+  height: 22px;
+  accent-color: #4caf50;
+  vertical-align: middle;
+  margin-right: 6px;
+}
 .tag-buttons {
   display: flex;
   flex-direction: column;
