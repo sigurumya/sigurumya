@@ -90,9 +90,9 @@ span#blog-list.blog-list {
   color: #232425;
 }
 .tag-checkbox {
-  width: 22px;
-  height: 22px;
-  accent-color: #4caf50;
+  width: 30px;
+  height: 30px;
+  accent-color: #ff9600;
   vertical-align: middle;
   margin-right: 6px;
 }
