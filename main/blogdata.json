@@ -1,5 +1,15 @@
 [
   {
+    "id": 4,
+    "title": "動画の進捗状況について",
+    "date": "2025/08/06",
+    "summary": "実況動画の更新について",
+    "Contents": "main/blog/B-4.json",
+    "url": "main/blog/blogview.html?id=B-4",
+    "thumbnail": "main/blog/thumbnails/B-4.webp",
+    "tags": ["ニュース"]
+  },
+  {
     "id": 3,
     "title": "ブログを大改修！",
     "date": "2025/06/11",

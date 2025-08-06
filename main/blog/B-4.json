@@ -1,7 +1,7 @@
 {
-    "title": "タイトル",
-    "subtitle": "サブタイトル",
-    "date": "日時",
+    "title": "動画の進捗状況について",
+    "subtitle": "実況動画の更新について",
+    "date": "2025/08/06",
     "content": [
       {
         "type": "html",
@@ -9,35 +9,48 @@
       },
       {
         "type": "h3",
-        "text": "なにかしらのタイトル"
-      },
-      {
-        "type": "html",
-        "text": "<iframe src=\"https://store.steampowered.com/widget/2992570/\" frameborder=\"0\" width=\"80%\" height=\"190\"></iframe>"
-      },
-      {
-        "type": "img",
-        "src": "画像URL",
-        "alt": "画像の説明"
+        "text": "進捗状況"
       },
       {
         "type": "p",
-        "text": "さらに詳細な内容を記入します。"
+        "text": "アマチュア無線4級の取得に向け勉強中のため、実況動画の更新が遅れています。"
+      },
+      {
+        "type": "p",
+        "text": "動画編集は進行中ですが、完成までにはもう少し時間がかかる見込みです。"
+      },
+      {
+        "type": "p",
+        "text": "次の動画はまだ未定で、以下のリンクでアンケートを実施しています。どのゲームの実況を見たいか、ぜひご参加ください！"
       },
       {
         "type": "a",
-        "href": "リンク先URL",
-        "text": "リンクテキスト"
+        "href": "http://youtube.com/post/UgkxoOMPHa02MNZQT1Z4FBooo46ag461WzbV?feature=shared",
+        "text": "こちらからどうぞ"
       },
       {
-        "type": "video",
-        "src": "動画URL",
-        "controls": true
+        "type": "html",
+        "text": "<hr>"
       },
       {
-        "type": "img",
-        "src": "画像URL",
-        "alt": "画像の説明"
+        "type": "h3",
+        "text": "動画シリーズの打ち切りのお知らせ"
+      },
+      {
+        "type": "p",
+        "text": "ショートPC解説は「ショートPC解説 &CPU・GPU編」を持って打ち切りとさていただきます。"
+      },
+      {
+        "type": "html",
+        "text": "<hr>"
+      },
+      {
+        "type": "h3",
+        "text": "今後の予定"
+      },
+      {
+        "type": "p",
+        "text": "今後は、アマチュア無線の勉強が終わり次第随時実況動画を更新していく予定です。"
       }
     ]
   }
