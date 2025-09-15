@@ -1,5 +1,15 @@
 [
   {
+    "id": 5,
+    "title": "投稿再開のお知らせ",
+    "date": "2025/09/15",
+    "summary": "動画投稿について",
+    "Contents": "main/blog/B-5.json",
+    "url": "main/blog/blogview.html?id=B-5",
+    "thumbnail": "main/blog/thumbnails/B-5.webp",
+    "tags": ["ニュース"]
+  },
+  {
     "id": 4,
     "title": "動画の進捗状況について",
     "date": "2025/08/06",
