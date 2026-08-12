@@ -1,7 +1,7 @@
 {
-    "title": "タイトル",
-    "subtitle": "サブタイトル",
-    "date": "日時",
+    "title": "投稿再開の予定について",
+    "subtitle": "今後について",
+    "date": "2026/08/12",
     "content": [
       {
         "type": "html",
@@ -9,35 +9,31 @@
       },
       {
         "type": "h3",
-        "text": "なにかしらのタイトル"
-      },
-      {
-        "type": "html",
-        "text": "<iframe src=\"https://store.steampowered.com/widget/2992570/\" frameborder=\"0\" width=\"80%\" height=\"190\"></iframe>"
-      },
-      {
-        "type": "img",
-        "src": "画像URL",
-        "alt": "画像の説明"
+        "text": "動画投稿再開の予定について"
       },
       {
         "type": "p",
-        "text": "さらに詳細な内容を記入します。"
+        "text": "資格取得を優先していたため、動画投稿を休止していましたが、今後は資格取得の予定も落ち着いてきたので、動画投稿を再開する予定です。"
       },
       {
-        "type": "a",
-        "href": "リンク先URL",
-        "text": "リンクテキスト"
+        "type": "p",
+        "text": "1年も投稿を休止してしまい、申し訳ありませんでした…"
       },
       {
-        "type": "video",
-        "src": "動画URL",
-        "controls": true
+        "type": "p",
+        "text": "この文章を書くのが2回だということを重々承知しておりますが、今後は随時更新していけたらと思いますので、よろしくお願いします。"
       },
       {
-        "type": "img",
-        "src": "画像URL",
-        "alt": "画像の説明"
+        "type": "html",
+        "text": "<hr>"
+      },
+      {
+        "type": "h3",
+        "text": "余談"
+      },
+      {
+        "type": "p",
+        "text": "ちなみに、ドローンの操縦資格を取得する予定です。"
       }
     ]
   }

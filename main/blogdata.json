@@ -1,5 +1,14 @@
 [
   {
+    "id": 6,
+    "title": "投稿再開の予定について",
+    "date": "2026/08/12",
+    "summary": "今後について",
+    "Contents": "main/blog/B-6.json",
+    "url": "main/blog/blogview.html?id=B-6",
+    "thumbnail": "main/blog/thumbnails/B-6.webp",
+    "tags": ["ニュース"]
+  },{
     "id": 5,
     "title": "投稿再開のお知らせ",
     "date": "2025/09/15",
